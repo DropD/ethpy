@@ -1,4 +1,8 @@
 def read(filename, delimiter = ' '):
+    '''
+    reads space separated data files into a 2D numpy array.
+    takes filename and optionally a delimiter.
+    '''
     import csv
     import numpy as np
     with open(filename) as dat:
