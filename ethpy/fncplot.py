@@ -11,6 +11,9 @@ class fncplot(object):
     '''
     @staticmethod
     def xlabel(*args, **kwargs):
+        if 'offset' in kwargs:
+            x += offset[0]
+            y += offset[1]
         plt.xlabel(*args, **kwargs)
 
     @staticmethod
