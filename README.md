@@ -4,15 +4,26 @@ ETHPy
 Python package with utilities I often used at ETHZ.
 
 modules:
-    * datio: read space separated data files
-    * fncplot: create plots conforming to standards of the course "How to Write Fast Numerical Code".
+
+* datio: read space separated data files
+* fncplot: create plots conforming to standards of the course "How to Write Fast Numerical Code".
+
+# install
+If you are going to use this quite a bit (as in you are taking Fast Code) you might want to install this into your pythonpath:
+
+using pip (requires distutils installed):
+
+```bash
+cd <ethpy base folder>
+pip install .
+```
     
 # usage
 
 ## datio
 By giving datio.read a delimiter char you can also make it read data files with other delimiters than space.
 
-myarray = datio.read( <filename> [, delimiter = <delimiter> ] )
+`myarray = datio.read( <filename> [, delimiter = <delimiter> ] )`
 
 Examples:
 
