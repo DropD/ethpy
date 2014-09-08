@@ -9,5 +9,9 @@ def read(filename, delimiter = ' '):
         rdr = csv.reader(dat, delimiter = ' ')
         data = []
         for row in rdr:
-            data.append([float(i.strip()) for i in row])
+            try:
+                data.append([float(i.strip()) for i in row if i])
+            except ValueError as e:
+                print 'could not be converted to floats:'
+                print row
         return np.array(data)
